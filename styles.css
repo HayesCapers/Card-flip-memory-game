@@ -1,0 +1,40 @@
+img{
+	max-width: 100%;
+}
+
+.card{
+	height: 300px;
+	min-width: 300px;
+	border: 2px solid black;
+	perspective: 500px;
+	padding: 0px;
+}
+
+.card-holder{
+	width: 300px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 1s all ease;
+}
+
+.card-front, .card-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+}
+
+.card-front{
+	transform: rotateY(180deg);
+}
+
+.card-back{
+	background-image: url('http://i.imgur.com/8flcI14.gif');
+	background-size: cover;
+	height: 300px;
+	min-width: 300px;
+}
+
+.flip{
+	transform: rotateY(180deg);
+}
